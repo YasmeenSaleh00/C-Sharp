@@ -199,13 +199,6 @@ namespace Methods___Collections_in_C_
             }
              printAllElements([1, 5, 9]);
 
-
-
-
-
-
-
-
         }
     }
 }
