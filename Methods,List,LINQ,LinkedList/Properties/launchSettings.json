@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Methods,List,LINQ,LinkedList": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
