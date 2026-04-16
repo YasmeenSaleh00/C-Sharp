@@ -328,7 +328,7 @@ namespace Function_Part3
                 }
                 return sum;
             }
-            Console.WriteLine($"The Sum of cubes is {sumOfCubes([1, 5, 9])}");
+            Console.WriteLine($"The Sum of cubes is {sumOfCubes([1, 5, 9,3])}");
 
 
         }
