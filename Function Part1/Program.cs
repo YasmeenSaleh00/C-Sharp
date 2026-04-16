@@ -198,7 +198,7 @@ namespace Function_Part1
 
             }
             Console.WriteLine($"The Avarage of Array is {Math.Round( aveArray([1, 2, 3, 8, 9, 77]),2)}");
-
+  
 
 
 
