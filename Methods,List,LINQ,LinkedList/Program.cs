@@ -209,6 +209,84 @@ namespace Methods_List_LINQ_LinkedList
                 int val = items["Apple"];
                 Console.WriteLine($"{value}: {val}");
             }
+            //Section 6: Thinking Tasks
+            //Task 26: Manual Search
+            Console.WriteLine("--------Task 26---------");
+            Console.WriteLine("Enter the value you want to search");
+            int targetValue = int.Parse(Console.ReadLine());
+            int countValue = 0;
+            for (int i = 0; i < mergedList.Count; i++)
+            {
+                if( mergedList[i] == targetValue )
+                {
+                    countValue++;
+                }
+            }
+            if(countValue > 0)
+            {
+                Console.WriteLine($"The value found {targetValue} times {countValue}");
+            }
+            else
+            {
+                Console.WriteLine($"The Target Value {targetValue} not Found !");
+
+            }
+            //Task 27: Count Even Without LINQ
+            Console.WriteLine("--------Task 27---------");
+            int countEven = 0;
+            for(int i = 0;i < mergedList.Count;i++)
+            {
+                if(mergedList[i] % 2 == 0)
+                {
+                    countEven++;
+                }
+            }
+            Console.WriteLine($"The count of Even Numbers is {countEven}");
+            //Task 28: Remove While Looping
+            Console.WriteLine("--------Task 28---------");
+            //Task 28: Remove elements safely
+            Console.WriteLine("--------Task 28---------");
+            Console.WriteLine("Enter the value you want to remove:");
+            int valueToRemove = int.Parse(Console.ReadLine());
+            //بلشت من النهاية مشان مشكلة shift indexing 
+            //اذا بلشت من البداية رح تتغير ال index  لكل عنصر
+            for (int i = mergedList.Count - 1; i >= 0; i--)
+            {
+                if (mergedList[i] == valueToRemove)
+                {
+                    mergedList.RemoveAt(i);
+                }
+            }
+
+            Console.WriteLine("Done! Elements removed safely.");
+            // Task 29: Find Second Largest Number (Manual)
+            Console.WriteLine("--------Task 29---------");
+            List<int> filterdMergedList = new List<int>();
+            for(int i = 0;i< mergedList.Count; i++)
+            {
+                if (!filterdMergedList.Contains(mergedList[i]))
+                {
+                    filterdMergedList.Add(mergedList[i]);
+                }
+            }
+            int firstMax = filterdMergedList[0];
+            foreach (int num in filterdMergedList)
+            {
+                if (num > firstMax)
+                { firstMax = num; }
+            }
+
+            int secondMax = filterdMergedList[1];
+            foreach (int num in filterdMergedList)
+            {
+                if (num > secondMax && num < firstMax)
+                {
+                    secondMax = num;
+                }
+            }
+
+            Console.WriteLine($"The second largest is: {secondMax}");
+          
 
 
 
