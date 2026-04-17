@@ -38,7 +38,7 @@ namespace C__Task_5
             {
                 Array.Sort(ints);
 
-                Console.Write($"Sorted Array:[{string.Join(",", ints)}]");
+                Console.WriteLine($"Sorted Array:[{string.Join(",", ints)}]");
             }
         }
         //Task 5
