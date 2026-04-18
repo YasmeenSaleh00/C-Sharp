@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.Intrinsics.X86;
 using static System.Collections.Specialized.BitVector32;
 
 namespace Methods_List_LINQ_LinkedList
@@ -242,8 +243,7 @@ namespace Methods_List_LINQ_LinkedList
                 }
             }
             Console.WriteLine($"The count of Even Numbers is {countEven}");
-            //Task 28: Remove While Looping
-            Console.WriteLine("--------Task 28---------");
+         
             //Task 28: Remove elements safely
             Console.WriteLine("--------Task 28---------");
             Console.WriteLine("Enter the value you want to remove:");
@@ -286,7 +286,8 @@ namespace Methods_List_LINQ_LinkedList
             }
 
             Console.WriteLine($"The second largest is: {secondMax}");
-          
+     
+
 
 
 
