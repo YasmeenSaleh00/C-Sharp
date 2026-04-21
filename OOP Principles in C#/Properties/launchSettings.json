@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OOP Principles in C#": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

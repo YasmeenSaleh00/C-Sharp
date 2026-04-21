@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C# Task 5", "C# Task 5\C# T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced OOP", "Advanced OOP\Advanced OOP.csproj", "{38E8B976-4275-404E-A404-C9718C480269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP Principles in C#", "OOP Principles in C#\OOP Principles in C#.csproj", "{42AB8567-FD97-4806-878D-7B5773DA8820}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{38E8B976-4275-404E-A404-C9718C480269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38E8B976-4275-404E-A404-C9718C480269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38E8B976-4275-404E-A404-C9718C480269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42AB8567-FD97-4806-878D-7B5773DA8820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AB8567-FD97-4806-878D-7B5773DA8820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AB8567-FD97-4806-878D-7B5773DA8820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AB8567-FD97-4806-878D-7B5773DA8820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
