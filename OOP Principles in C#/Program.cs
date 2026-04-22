@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.Metrics;
+using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace OOP_Principles_in_C_
@@ -84,25 +88,171 @@ namespace OOP_Principles_in_C_
 
             //- Set the company name once
             //- Create multiple employees and print the company name with each employee
-             Console.WriteLine("------------Task Description: Static Proptry---------------");
+            // Console.WriteLine("------------Task Description: Static Proptry---------------");
 
-            Company.Name = "Orange";
-            Company employeeOne = new Company();
-            employeeOne.EmployeeName = "Ahmad";
-            Company employeeTwo = new Company();
-            employeeTwo.EmployeeName = "Yasmeen";
-            Console.WriteLine($" Employee Number one {employeeOne.EmployeeName } from {Company.Name} Compny");
-            Console.WriteLine($"Employee Number Two {employeeTwo.EmployeeName} from {Company.Name} Compny");
+            //Company.Name = "Orange";
+            //Company employeeOne = new Company();
+            //employeeOne.EmployeeName = "Ahmad";
+            //Company employeeTwo = new Company();
+            //employeeTwo.EmployeeName = "Yasmeen";
+            //Console.WriteLine($" Employee Number one {employeeOne.EmployeeName } from {Company.Name} Compny");
+            //Console.WriteLine($"Employee Number Two {employeeTwo.EmployeeName} from {Company.Name} Compny");
 
             //### Task Description
 
-            //            1.Create a class with **method overloading** (e.g., `Add`)
+            //1.Create a class with **method overloading** (e.g., `Add`)
             //2. Create a base class `Animal` with virtual method `Speak()`
             //3. Create a derived class `Cat` and override `Speak()`
             //4. Create a class `Person` with private field and property(Encapsulation)
             //5. Create an **abstract class `Shape`** with method `GetArea()`
             //6. Create a class `Rectangle` that inherits from `Shape`
+             Console.WriteLine("-----------1 -Task Description: method overloading---------------");
+
+            Calculator calc = new Calculator();
+
+            Console.WriteLine($"Sum of 2 ints: {calc.Add(5, 10)}");
+            Console.WriteLine($"Sum of 3 ints: {calc.Add(5, 10, 15)}");
+            Console.WriteLine($"Sum of 2 doubles: {calc.Add(5.5, 10.2)}");
+            Console.WriteLine("-----------2 -Task Description: method overriding---------------");
+
+            Animal myAnimal = new Animal();
+            myAnimal.Speak(); 
+
+            Cat myCat = new Cat();
+            myCat.Speak();
+            //### **Task Description: Polymorphism (Method Overloading)**
+
+            //            Create a class `Calculator` with multiple methods named `Add`:
+
+            //- One method that takes two integers
+            //- One method that takes three integers
+            //- One method that takes decimal numbers
+
+            //**Requirements:**
+
+            //- Test all cases in `Main`
+            Console.WriteLine("------------ -Task Description: Polymorphism (Method Overloading)---------------");
+            Calculator calculator = new Calculator();
+
+            Console.WriteLine($"Sum of 2 ints: {calculator.Add(5, 10)}");
+            Console.WriteLine($"Sum of 3 ints: {calculator.Add(5, 10, 15)}");
+            Console.WriteLine($"Sum of 2 doubles: {calculator.Add(5.5, 10.2)}");
+            Console.WriteLine($"Sum of 2 decimal: {calculator.Add(9.5m, 10.2m)}");
+            //### 📝 **Task Description: Polymorphism (Method Overriding)**
+
+            //            Create a base class `Animal` with a method `MakeSound()`
+
+            //Then create two derived classes:
+
+            //- `Dog`
+            //- `Cat`
+
+            //**Requirements:**
+
+            //- Override the method in each class
+            //- Print the appropriate sound for each animal
+            Console.WriteLine("------------ Task: Polymorphism (Method Overriding) ------------");
+
+            Animal myDog = new Dog();
+            Animal cat = new Cat();
+
+            Console.Write("Dog Sound: ");
+            myDog.Speak();
+
+            Console.Write("Cat Sound: ");
+            cat.Speak();
+            //### **Task Description: Abstraction**
+
+            //            Create an `abstract class` called `Appliance` that represents a general home appliance.
+
+            //            It should include:
+
+            //- An abstract method `TurnOn()`
+            //- An abstract method `TurnOff()`
+            //- A property `Brand`
+
+            //Then create two derived classes:
+
+            //- `WashingMachine`
+            //- `AirConditioner`
+
+            //**Requirements:**
+
+            //- Each class must implement `TurnOn()` and `TurnOff()` differently
+            //- `WashingMachine` should simulate starting a wash cycle and stopping it
+            //- `AirConditioner` should simulate cooling mode activation and shutdown
+            //- Print clear messages showing the appliance status and brand name
+            Console.WriteLine("------------ Task: Polymorphism Abstraction ------------");
+
+            List<Appliance> myAppliances = new List<Appliance>
+            {
+                new WashingMachine { BrandName = "LG" },
+                new AirConditioner { BrandName = "Samsung" }
+            };
+
+            foreach (var item in myAppliances)
+            {
+                item.TurnOn();
+            }
+
+
+            foreach (var item in myAppliances)
+            {
+                item.TurnOff();
+            }
+            //### **Task Description: Encapsulation**
+
+            //            Create a class `BankAccount` that includes:
+
+            //- A private field `balance`
+            //- Methods `Deposit` and `Withdraw`
+            //- A read-only property to view the balance
+
+            //**Requirements:**
+
+            //- Prevent direct modification of the balance
+            //- Validate withdrawals(no overdrawing allowed)
+            Console.WriteLine("------------ Task:  Abstract Class ------------");
+            BankAccount myAccount = new BankAccount();
+
+            myAccount.Deposit(100);
+            myAccount.Withdraw(50);  
+            myAccount.Withdraw(200); 
+
+            Console.WriteLine($"Final Balance: ${myAccount.Balnce}");
+            //            Create an `abstract class` called `Employee` that includes:
+
+            //- A property `Name`
+            //- A method `CalculateSalary()`
+
+            //Then create two classes:
+
+            //- `FullTimeEmployee`
+            //- `PartTimeEmployee`
+
+            //**Requirements:**
+
+            //- Each class should implement salary calculation differently
+            //- Test the calculations in `Main`
             
+            Console.WriteLine("------------ Task: Encapsulation ------------");
+
+            FullTimeEmployee ft = new FullTimeEmployee
+            {
+                Name = "Yasmeen",
+                MonthlySalary = 1200
+            };
+
+            PartTimeEmployee pt = new PartTimeEmployee
+            {
+                Name = "Ahmad",
+                HourlyRate = 15,
+                HoursWorked = 70
+            };
+
+            Console.WriteLine($"{ft.Name} (Full-Time) Salary: ${ft.CalculateSalary()}");
+            Console.WriteLine($"{pt.Name} (Part-Time) Salary: ${pt.CalculateSalary()}");
+
 
 
 
