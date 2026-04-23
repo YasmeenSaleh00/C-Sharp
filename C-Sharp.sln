@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced OOP", "Advanced OO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP Principles in C#", "OOP Principles in C#\OOP Principles in C#.csproj", "{42AB8567-FD97-4806-878D-7B5773DA8820}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP(Interface , Exception , try and catch )", "OOP(Interface , Exception , try and catch )\OOP(Interface , Exception , try and catch ).csproj", "{37021AC3-1D2C-497A-A652-2E70709BB21E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{42AB8567-FD97-4806-878D-7B5773DA8820}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42AB8567-FD97-4806-878D-7B5773DA8820}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42AB8567-FD97-4806-878D-7B5773DA8820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37021AC3-1D2C-497A-A652-2E70709BB21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37021AC3-1D2C-497A-A652-2E70709BB21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37021AC3-1D2C-497A-A652-2E70709BB21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37021AC3-1D2C-497A-A652-2E70709BB21E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

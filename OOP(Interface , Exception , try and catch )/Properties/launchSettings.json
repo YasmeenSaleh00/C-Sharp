@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "OOP(Interface , Exception , try and catch )": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
