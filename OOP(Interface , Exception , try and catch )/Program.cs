@@ -11,34 +11,35 @@ namespace OOP_Interface___Exception___try_and_catch__
         {
             //### Task Description
 
-            //            1.Create an * *interface `ICalculator`** with method `Add(int a, int b)`
+            // 1.Create an * *interface `ICalculator`** with method `Add(int a, int b)`
             //2. Create a class `Calculator` that implements the interface
             //3. Ask the user to enter two numbers
             //4. Use `try-catch` to handle invalid input
             //5. Print the result
             Calculator myCalc = new Calculator();
-            bool isCorrectInput = false;
 
-            while (!isCorrectInput)
+            int num1, num2;
+
+            while (true)
             {
                 try
                 {
-                    Console.Write("Enter the first number ");
-                    int n1 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter first number: ");
+                    num1 = int.Parse(Console.ReadLine());
 
-                    Console.Write("Enter the second number ");
-                    int n2 = int.Parse(Console.ReadLine());
+                    Console.Write("Enter second number: ");
+                    num2 = int.Parse(Console.ReadLine());
 
-                    int result = myCalc.Add(n1, n2);
-
-                    Console.WriteLine($"The result {result}");
-                    isCorrectInput = true; 
+                    break; 
                 }
-                catch (FormatException ex)
+                catch
                 {
-                    Console.WriteLine(ex.ToString());                }
-              
+                    Console.WriteLine("Invalid input! Try again...\n");
+                }
             }
+
+            int result = myCalc.Add(num1, num2);
+            Console.WriteLine("Result = " + result);
         }
     }
 }
